@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lời chúc 20/10 ngọt ngào</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fce4ec; /* Màu hồng nhạt */
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .heart-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            animation: pulse 1s infinite alternate; /* Hiệu ứng đập */
+        }
+
+        .heart {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #ff007f; /* Màu hồng đậm */
+            transform: rotate(-45deg);
+            left: 25px;
+            top: 25px;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #ff007f;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 50px;
+            top: 0;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        .message {
+            margin-top: 30px;
+            color: #d81b60; /* Màu chữ đậm */
+            font-size: 2.5em; /* Kích thước chữ to */
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #f48fb1;
+        }
+
+        /* Chữ nhỏ hơn cho ngày 20/10 */
+        .date {
+            font-size: 0.8em;
+            color: #d81b60;
+            margin-top: -10px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart-container">
+        <div class="heart"></div>
+    </div>
+    <div class="message">
+        Chúc mẹ Ngân có ngày 20/10 vui vẻ!
+    </div>
+</body>
+</html>
